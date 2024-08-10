@@ -30,12 +30,12 @@ cp -R tooling/html/\* /var/www/html/
 # Setup MySQL database
 
 cd /tooling
-mysql -h cdk-rds.cly8ayoym3bc.us-west-1.rds.amazonaws.com -u celyne -p toolingdb < tooling-db.sql
+mysql -h cdk-rds.cly8ayoym3bc.us-west-1.rds.amazonaws.com -u admin -p 5wTMa=Gk+95?SQX < tooling-db.sql
 
 cd /var/www/html/
 touch healthstatus
 
-sed -i "s/$db = mysqli_connect('mysql.tooling.svc.cluster.local', 'admin', 'admin', 'tooling');/$db = mysqli_connect('cdk-rds.cly8ayoym3bc.us-west-1.rds.amazonaws.com', 'celyne', 'devopspbl', 'toolingdb');/g" functions.php
+sed -i "s/$db = mysqli_connect('mysql.tooling.svc.cluster.local', 'admin', 'admin', 'tooling');/$db = mysqli_connect('cdk-rds.cly8ayoym3bc.us-west-1.rds.amazonaws.com', 'admin', '5wTMa=Gk+95?SQX', 'toolingdb');/g" functions.php
 
 chcon -t httpd_sys_rw_content_t /var/www/html/ -R
 
