@@ -3,7 +3,7 @@
 exec > /var/log/wordpress.log 2>&1
 
 mkdir -p /var/www/
-sudo mount -t efs -o tls,accesspoint=fsap-04d9a7dbdc13339b6 fs-0a71d71a5e6a321e6:/ /var/www/
+sudo mount -t efs -o tls,accesspoint=fsap-0d7f6bbe26976b344 fs-09f8367a7f9f0857c:/ /var/www/
 
 # Install and start Apache
 
