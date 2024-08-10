@@ -126,7 +126,7 @@ vi /etc/httpd/conf.d/ssl.conf
 
 # Login into the RDS instance and create database for wordpress and tooling wordpress and tooling database
 
-mysql -h cdk-database.cdqpbjkethv0.us-west-1.rds.amazonaws.com -u adminuser -p
+mysql -h cdk-rds.cly8ayoym3bc.us-west-1.rds.amazonaws.com -u celyne -p toolingdb
 
 CREATE DATABASE toolingdb;
 CREATE DATABASE wordpressdb;
