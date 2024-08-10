@@ -31,8 +31,8 @@ cd /var/www/html/
 touch healthstatus
 
 sed -i "s/localhost/cdk-rds.cly8ayoym3bc.us-west-1.rds.amazonaws.com/g" wp-config.php
-sed -i "s/username_here/celyne/g" wp-config.php
-sed -i "s/password_here/devopspbl/g" wp-config.php
+sed -i "s/username_here/admin/g" wp-config.php
+sed -i "s/password_here/5wTMa=Gk+95?SQX/g" wp-config.php
 sed -i "s/database_name_here/wordpressdb/g" wp-config.php
 
 chcon -t httpd_sys_rw_content_t /var/www/html/ -R
