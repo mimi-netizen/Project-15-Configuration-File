@@ -5,7 +5,7 @@ exec > /var/log/tooling.log 2>&1
 # Create directory and mount EFS
 
 mkdir -p /var/www/
-sudo mount -t efs -o tls,accesspoint=fsap-01060d13e30957a51 fs-0a71d71a5e6a321e6:/ /var/www/
+sudo mount -t efs -o tls,accesspoint=fsap-09c86085067becad5 fs-09f8367a7f9f0857c:/ efs /var/www/
 
 # Install and start Apache
 
